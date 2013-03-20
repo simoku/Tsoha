@@ -46,7 +46,7 @@ public class UusiKayttaja extends HttpServlet {
             kp.setKaupunki(request.getParameter("Kaupunki"));
             kp.setPostinumero(request.getParameter("Postinumero"));
             kp.setPaino(request.getParameter("Paino"));
-            
+            kp.setIka(request.getParameter("Ika"));
             kp = KayttajaDao.UusiKayttaja(kp);
             
             if (kp.isValid()) {

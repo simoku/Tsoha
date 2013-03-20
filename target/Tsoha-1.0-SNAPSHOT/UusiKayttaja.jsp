@@ -21,7 +21,8 @@
                 <tr><td>Kaupunki</td><td><input type="text" name="Kaupunki" /></td></tr>
                 <tr><td>Postinumero</td><td><input type="text" name="Postinumero" /></td></tr>
                 <tr><td>Alkupaino</td><td><input type="text" name="Paino" /></td></tr>
-                <tr>
+                <tr><td>Ikä</td><td><input type="text" name="Ikä" /></td></tr>
+                
 
                     <td></td>
                     <td><input type="submit" value="submit"></td>

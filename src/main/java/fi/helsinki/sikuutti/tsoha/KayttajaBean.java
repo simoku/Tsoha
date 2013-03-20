@@ -19,6 +19,7 @@ public class KayttajaBean {
     private String Postinumero;
     private String Paino;
     private boolean Valid;
+    private String Ika;
 
     /**
      *
@@ -40,6 +41,14 @@ public class KayttajaBean {
      *
      * @return
      */
+    public String getIka() {
+        return Ika;
+    }
+
+    public void setIka(String Ika) {
+        this.Ika = Ika;
+    }
+
     public String getNimi() {
         return Nimi;
     }

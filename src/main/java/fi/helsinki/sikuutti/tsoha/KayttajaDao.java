@@ -23,7 +23,7 @@ public class KayttajaDao {
     static PreparedStatement preparedStatement = null;
     static String HAE_KAYTTAJA = "select * from Users where KayttajaTunnus=? AND SalaSana=?";
     static String LISAA_KAYTTAJA = "insert into Users (Nimi,KayttajaTunnus,Salasana,Osoite,Kaupunki,Postinumero,Paino)"
-            + "values (?,?,?,?,?,?,?)";
+            + "values (?,?,?,?,?,?,?,?)";
 
     /**
      *
@@ -88,7 +88,7 @@ public class KayttajaDao {
             preparedStatement.setString(5,bean.getKaupunki());
             preparedStatement.setString(6,bean.getPostinumero());
             preparedStatement.setString(7,bean.getPaino());
-            
+            preparedStatement.setString(7,bean.getIka());
             System.out.println(LISAA_KAYTTAJA);
             preparedStatement.executeUpdate();
            
