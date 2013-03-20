@@ -9,13 +9,31 @@
         <title>Sisäänkirjaantuminen</title>
     </head> 
     <body> 
+        <form action="LoginServlet1" method="post">
+
+            <table>
+                <tr>
+                    <td>Käyttäjätunnus</td>
+                    <td><input type="text" name="user"/></td>
+                </tr>
+                <tr>
+                    <td>Salasana</td>
+                    <td><input type="password" name="pw"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+
+                    <td></td>
+                    <td><input type="submit" value="submit"></td>
+                </tr>
+
+                <tr><td><a href="UusiKayttaja.jsp">uusi käyttäjä<td><a href="Selaus.jsp" >selaus</td></tr>
+            </table></form>
         
-        Anna käyttäjätiedot. Jos haluat vain selata tietoja, jätä kentät tyhjiksi
-        <form action="LoginServlet1" methot="post"> 
-            Käyttäjätunnus<input type="text" name="user"/><br> 
-            Salasana <input type="password" name="pw"/> 
-            <input type="submit" value="submit"> </form> 
-    <c:out value="${param.viesti}"/>
-    
-    </body> 
+        <p><c:out value="${param.viesti}"/></p>
+</body>
 </html>

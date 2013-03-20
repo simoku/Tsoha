@@ -16,6 +16,10 @@ public class ConnectionManager {
     
     static Connection conn;
  
+    /**
+     *
+     * @return
+     */
     public static Connection getConnection()
     {
         try
