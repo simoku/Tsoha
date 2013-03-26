@@ -36,7 +36,8 @@ public class UusiKayttaja extends HttpServlet {
         
         try {
             
-            
+            int paino=0;
+            int ika=0;
             
             KayttajaBean kp = new KayttajaBean();
             kp.setNimi(request.getParameter("Nimi"));
@@ -45,8 +46,11 @@ public class UusiKayttaja extends HttpServlet {
             kp.setOsoite(request.getParameter("Osoite"));
             kp.setKaupunki(request.getParameter("Kaupunki"));
             kp.setPostinumero(request.getParameter("Postinumero"));
-            kp.setPaino(request.getParameter("Paino"));
-            kp.setIka(request.getParameter("Ika"));
+            paino=Integer.parseInt(request.getParameter("Paino"));
+            kp.setPaino(paino);
+            ika=Integer.parseInt(request.getParameter("Ika"));
+            kp.setIka(ika);
+            
             kp = KayttajaDao.UusiKayttaja(kp);
             
             if (kp.isValid()) {

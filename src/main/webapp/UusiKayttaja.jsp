@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Lisää käyttäjä</title>
     </head>
     <body>
         <form action="UusiKayttaja" method="post">
@@ -21,7 +21,7 @@
                 <tr><td>Kaupunki</td><td><input type="text" name="Kaupunki" /></td></tr>
                 <tr><td>Postinumero</td><td><input type="text" name="Postinumero" /></td></tr>
                 <tr><td>Alkupaino</td><td><input type="text" name="Paino" /></td></tr>
-                <tr><td>Ikä</td><td><input type="text" name="Ikä" /></td></tr>
+                <tr><td>Ikä</td><td><input type="text" name="Ika" /></td></tr>
                 
 
                     <td></td>

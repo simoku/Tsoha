@@ -21,8 +21,8 @@ public class KayttajaDao {
     static Connection currentCon = null;
     static ResultSet rs = null;
     static PreparedStatement preparedStatement = null;
-    static String HAE_KAYTTAJA = "select * from Users where KayttajaTunnus=? AND SalaSana=?";
-    static String LISAA_KAYTTAJA = "insert into Users (Nimi,KayttajaTunnus,Salasana,Osoite,Kaupunki,Postinumero,Paino)"
+    static String HAE_KAYTTAJA = "select * from Kayttajat where KayttajaTunnus=? AND SalaSana=?";
+    static String LISAA_KAYTTAJA = "insert into Kayttajat (Nimi,KayttajaTunnus,Salasana,Osoite,Kaupunki,Postinumero,Paino,Ika)"
             + "values (?,?,?,?,?,?,?,?)";
 
     /**
@@ -87,8 +87,8 @@ public class KayttajaDao {
             preparedStatement.setString(4,bean.getOsoite());
             preparedStatement.setString(5,bean.getKaupunki());
             preparedStatement.setString(6,bean.getPostinumero());
-            preparedStatement.setString(7,bean.getPaino());
-            preparedStatement.setString(7,bean.getIka());
+            preparedStatement.setInt(7,bean.getPaino());
+            preparedStatement.setInt(8,bean.getIka());
             System.out.println(LISAA_KAYTTAJA);
             preparedStatement.executeUpdate();
            
@@ -96,6 +96,7 @@ public class KayttajaDao {
             
 
         } catch (Exception x) {
+            System.out.println(x);
             
         } finally {
             try {

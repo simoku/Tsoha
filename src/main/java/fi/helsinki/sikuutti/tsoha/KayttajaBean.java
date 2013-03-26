@@ -17,9 +17,9 @@ public class KayttajaBean {
     private String Osoite;
     private String Kaupunki;
     private String Postinumero;
-    private String Paino;
+    private int Paino;
     private boolean Valid;
-    private String Ika;
+    private int Ika;
 
     /**
      *
@@ -41,11 +41,11 @@ public class KayttajaBean {
      *
      * @return
      */
-    public String getIka() {
+    public int getIka() {
         return Ika;
     }
 
-    public void setIka(String Ika) {
+    public void setIka(int Ika) {
         this.Ika = Ika;
     }
 
@@ -145,7 +145,7 @@ public class KayttajaBean {
      *
      * @return
      */
-    public String getPaino() {
+    public int getPaino() {
         return Paino;
     }
 
@@ -153,7 +153,7 @@ public class KayttajaBean {
      *
      * @param Paino
      */
-    public void setPaino(String Paino) {
+    public void setPaino(int Paino) {
         this.Paino = Paino;
     }
 
