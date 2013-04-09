@@ -31,7 +31,7 @@
                     <td><input type="submit" value="submit"></td>
                 </tr>
 
-                <tr><td><a href="UusiKayttaja.jsp">uusi käyttäjä<td><a href="Selaus.jsp" >selaus</td></tr>
+                <tr><td><a href="UusiKayttaja.jsp">uusi käyttäjä<td><a href="<%=request.getContextPath()%>/SelausServlet">selaus</td></tr>
             </table></form>
         
         <p><c:out value="${param.viesti}"/></p>
