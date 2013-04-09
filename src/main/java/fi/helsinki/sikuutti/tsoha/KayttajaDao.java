@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -110,4 +111,38 @@ public class KayttajaDao {
 
 
     }
+    
+    public static ArrayList<String> haeLajit() {
+
+      ArrayList<String> lista=new ArrayList<String>();
+       try {
+
+            currentCon = ConnectionManager.getConnection();
+            preparedStatement = currentCon.prepareStatement("select Laji from Harjoitus");
+
+            
+           
+            rs = preparedStatement.executeQuery();
+            
+            while(rs.next()){
+            lista.add(rs.getString(1));    
+                System.out.println(rs.getString(1));    
+            }
+
+        } catch (Exception x) {
+        } finally {
+            try {
+                currentCon.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(KayttajaDao.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return lista ;
+        
+
+
+
+    }
+    
+    
 }
